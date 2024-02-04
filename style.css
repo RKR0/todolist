@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #191919;
+  
+}
+
+header{
+    background-color: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: auto;
+}
+.section1{
+    display: flex;
+    align-items: center;
+    margin-top: -50px;
+   
+}
+.section1div{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-right: 30px;
+    gap: 10px;
+
+}
+.taskname{
+    width: 500px;
+    height: 50px;
+    background-color: #262626;
+    border: 2px solid #0d0d0d;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.section1 button{
+    width: 100px;
+    height: 60px;
+    padding: 5px 15px;
+    color: white;
+    font-weight: 600;
+    background-color: #1E6F9F;
+    border: 2px solid #0d0d0d;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.date{
+    width: 150px;
+    height: 50px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: white;
+    background-color:#262626;
+    border: 2px solid #0d0d0d;
+    align-self: center; 
+    font-size: 20px;
+}
+
+#priority{
+    width: 150px;
+    height: 60px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: white;
+    background-color:#262626;
+    border: 2px solid #0d0d0d;
+   font-size: 20px;
+}
+
+label{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-left: 10px; 
+}
+.temp{
+    color: #0d0d0d;
+}
+
+.section2div{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 70px;
+    margin-right: 150px;
+    gap: 10px;
+
+}
+
+#status{
+    width: 150px;
+    height: 60px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: white;
+    background-color:#262626;
+    border: 2px solid #0d0d0d;
+    font-size: 18px;
+}
+#status1{
+    width: 200px;
+    height: 60px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: white;
+    background-color:#262626;
+    border: 2px solid #0d0d0d;
+   font-size: 20px;
+}
+#priority1{
+    width: 150px;
+    height: 60px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: white;
+    background-color:#262626;
+    border: 2px solid #0d0d0d;
+   font-size: 20px;
+}
+
+h2{
+    color: #4EA8DE;
+    align-items: center;
+    align-self: center;
+    margin-left: 520px;
+    font-size: 30px;
+    margin-top: 20px;
+    
+}
+.section2 button{
+    width: 100px;
+    height: 60px;
+    padding: 5px 15px;
+    color: white;
+    font-weight: 600;
+    background-color: #1E6F9F;
+    border: 2px solid #0d0d0d;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.section2 label{
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 10px; 
+}
+
+.temp1{
+    color: #191919;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.section3{
+    
+    margin-left: 150px;
+    width: 70%;
+    margin-top: 100px;
+}
+
+.To-do{
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo{
+   
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.todo .text{
+    color: #4EA8DE;
+    padding: 5px;
+    font-size: 22px;
+    font-weight: 600;
+}
+.todo .count,.count{
+    background-color: #333333;
+    padding: 5px;
+    font-size: 22px;
+    border-radius: 40%;
+    color: white;
+}
+
+.text-priotity{
+    color: #7B7DEC;
+    padding: 5px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+ul{
+    margin:20px 10px ;
+}
+ul li{
+   
+    border: 3px solid #2c2c2c;
+    background-color: #262626;
+    padding: 10px 30px;
+    font-size: 18px;
+    margin-top: 35px;
+    color: white;
+    border-radius:10px ;
+    height: auto;
+    text-wrap: wrap;
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+ul li.checked{
+    
+    text-decoration: line-through;
+} 
+
+ul li.checked::before{
+    background-image: url(./checked.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    color: #555;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+
+}
+ul li span:hover{
+    background-color:  #edeef0;
+    
+}
+
+.Date{
+    
+    color: red;
+    margin-left: 500px;
+    width: 150px;
+    border-radius: 0px;
+    margin-right: 35px;
+    font-size: 14px;
+}
+
+
+    
+
+
+.bottom{
+    margin-bottom: 150px;   
+}
+
+
+
+
+
+
+
+
+/* Add styles for the edit button */
+.edit-btn button {
+    background-color: #4caf50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-btn button:hover {
+    background-color: #45a049;
+}
+
+.task-item {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.task-details {
+    display: block;
+    justify-content: space-between;
+}
+
+.task-name {
+    font-weight: bold;
+}
+
+.high {
+    margin-left: 50px;
+    color: red; /* You can customize the color based on your priority levels */
+}
+.medium{
+    margin-left: 50px;
+    color: orange;  
+}
+.low{
+    margin-left: 50px;
+    color: green;  
+}
+
+
+.action-buttons button {
+    margin-left: 10px;
+}

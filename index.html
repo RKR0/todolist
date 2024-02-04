@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="Logo.png" alt="logo">
+    </header>
+
+    <section class="section1">
+        <form id="task_form">
+           <div class = "section1div">
+                <div >
+                    <label for="inputbox" >Task Name</label>
+                    <input class = "taskname" type="text" name="search" id="inputbox" placeholder="Enter Your To-do List Task" required>
+                </div>
+            
+                <div>
+                    <label for="dueDate" >Due date </label>
+                    <input class="date" type="date" placeholder="Due Date" id="dueDate" required> 
+                </div>
+                <div>
+                    <label for="status" id="statusp">Status:</label>
+                    <select id="status" name="status" required>
+                        <option value="todo">To-do</option>
+                        <option value="inprogress">In-Progress</option>
+                        <option value="done">Done</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="priority" id="labelperority">Priority:</label>
+                    <select id="priority" name="Priotity" required>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="temp"> .</label>
+                    <button type="button" onclick="addTask()">Add <i class="fa-solid fa-circle-plus"></i></button>
+                </div>
+                
+            </div>
+        </form>
+    </section>   
+   
+    <section class="section2">
+        <form id="form">
+            <h2>Advance Filter</h2>
+           <div class = "section2div">
+                <div >
+                    <label for="Due" class="temp1">.</label>
+                    <input class = "taskname" type="text" name="search" id="inputbox" placeholder="Search Your Task" required>
+                </div>
+            
+                <div>
+                    <label for="status" id="statusp">Status:</label>
+                    <select id="status1" name="status" required>
+                        <option value="high">To-do</option>
+                        <option value="medium">In-Progress</option>
+                        <option value="low">Done</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="priority" id="labelperority">Priority:</label>
+                    <select id="priority1" name="Priotity" required>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="temp1"> .</label>
+                    <button type="button" onclick="searchTasks()">Search</button>
+                </div>
+                
+            </div>
+        </form>
+  
+    </section>   
+       
+
+    <section class="section3">
+        <div class="To-do" onclick="renderTasksForStatus('todo')">
+            <div class="todo"><span class="text">To Do</span><span class="count" id="listcount">0</span></div>
+            <div class="highcoynt"><span class="text-priotity">High Priority</span> <span class="count" id="highpriotity">0</span></div>
+        </div>
+        <br>
+        <hr>
+    
+       
+            <div class="todo-list" id="todolist">
+             
+                <ul id="list-container">
+                    <!-- Tasks will be dynamically added here -->
+               </ul>
+            </div>
+            <div class="To-do" onclick="renderTasksForStatus('inprogress')">
+                <div class="todo"><span class="text">Started</span><span class="count" id="countInProgress">0</span></div>
+                <div class="highcoynt"><span class="text-priotity">High Priority</span> <span class="count" id="highPriorityCountInProgress">0</span></div>
+            </div>
+       
+    
+        <br>
+        <hr>
+        <br>
+        <div class="todo-list" id="inprogresslist">
+            
+            <ul id="list-container">
+                <!-- Tasks will be dynamically added here -->
+           </ul>
+        </div>
+        <div class="To-do" onclick="renderTasksForStatus('done')">
+            <div class="todo"><span class="text">Completed</span><span class="count" id="comlited">0</span></div>
+            <div class="highcoynt"><span class="text-priotity">High Priority</span> <span class="count" id="highpriotitycomplited">0</span></div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="todo-list" id="donelist">
+            <ul id="list-container">
+                <!-- Tasks will be dynamically added here -->
+           </ul>
+        </div>
+    </section>
+    
+            
+     
+    
+    <div id="notification"></div>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
